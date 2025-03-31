@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/JackB/manimations/media/videos/main/1080p60/partial_movie_files/LorenzAttractor/1283824016_901130820_3206730155.mp4'
+file 'file:C:/Users/JackB/manimations/media/videos/main/1080p60/partial_movie_files/LorenzAttractor/1032329649_2405905131_1792536741.mp4'
+file 'file:C:/Users/JackB/manimations/media/videos/main/1080p60/partial_movie_files/LorenzAttractor/3908577058_2465917885_3394371966.mp4'
