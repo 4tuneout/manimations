@@ -4,6 +4,10 @@ from manim.opengl import *
 from scipy.integrate import solve_ivp
 import numpy as np
 
+config.renderer = "opengl" # u have to put in terminal
+config.window_size = (1920, 1080)
+config.fullscreen = True
+
 # Define the Lorenz system
 def lorenz_system(t, state, sigma=10, rho=28, beta=8/3):
     x, y, z = state
@@ -41,7 +45,7 @@ def generate_color_gradient(num_colors):
 class LorenzAttractorOpenGL(ThreeDScene):
     def construct(self):
         # Set renderer to OpenGL
-        config.renderer = "opengl"
+
         
         # Number of curves to generate
         num_curves = 10
@@ -64,8 +68,8 @@ class LorenzAttractorOpenGL(ThreeDScene):
         self.move_camera(frame_center=np.array([0,0,2.5]))
 
         # Add title
-        title = Text("Lorenz Attractor", font_size=24).to_corner(UL)
-        self.add_fixed_in_frame_mobjects(title)
+        #title = Text("Lorenz Attractor", font_size=24).to_corner(UL)
+        #self.add_fixed_in_frame_mobjects(title)
         
         # Generate initial conditions
         initial_conditions = [[1 + i, 1 + i, 1 + i] for i in range(num_curves)]
