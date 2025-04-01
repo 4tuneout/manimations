@@ -1,3 +1,6 @@
 manim
 scipy
 numpy
+plotly
+ipywidgets
+jupyterlab
