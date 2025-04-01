@@ -1,3 +1,4 @@
+import array
 from manim import *  
 from manim.opengl import *
 from scipy.integrate import solve_ivp
@@ -53,17 +54,15 @@ class LorenzAttractorOpenGL(ThreeDScene):
             axis_config={"include_tip": True}
         )
         
-        # Move the frame center down by 5 units
-        self.camera.frame_center = np.array([0, 0, 5])
-
-        
-        # Set camera orientation with increased height and 90-degree rotation
-        self.set_camera_orientation(theta=135 * DEGREES, phi=75 * DEGREES)
-
-        
         # Add axes to the scene
         self.add(axes)
+
+        # Set camera orientation with increased height and 90-degree rotation
+        self.set_camera_orientation(theta=225 * DEGREES, phi=75 * DEGREES)
         
+        # Move camera up by 10 units
+        self.move_camera(frame_center=np.array([0,0,2.5]))
+
         # Add title
         title = Text("Lorenz Attractor", font_size=24).to_corner(UL)
         self.add_fixed_in_frame_mobjects(title)
