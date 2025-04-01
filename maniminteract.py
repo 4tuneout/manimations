@@ -34,7 +34,6 @@ def interpolate_color(color1, color2, alpha):
 def generate_color_gradient(num_colors):
     colors = []
     for i in range(num_colors):
-        # Interpolate between blue and yellow
         r = i / (num_colors - 1)
         blue_color = interpolate_color(BLUE, YELLOW, r)
         colors.append(blue_color)
