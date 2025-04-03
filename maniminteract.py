@@ -130,7 +130,7 @@ class LorenzAttractorOpenGL(ThreeDScene):
         self.begin_ambient_camera_rotation(rate=0.1)
         
         # Wait to show the rotation
-        self.wait(20)
+        self.wait(60)
         
         # Stop camera rotation
         self.stop_ambient_camera_rotation()
